@@ -14,7 +14,7 @@ public class Plugin : BaseUnityPlugin
     {
         Logger = base.Logger;
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
-        BundleTool.LoadBundle("asset.bundle");
+        BundleTool.LoadBundle();
         var harmony = new Harmony("com.machaceleste.realtimedisplayplugin");
         harmony.PatchAll();
     }
